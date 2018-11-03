@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoIoTHub.Paginas.PaginaTelemetria">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Padding="10">
+            <Button 
+                x:Name="RegistrarDispositivo" 
+                Text="Registrar dispositivo"
+                TextColor="White"
+                BackgroundColor="Blue"
+                FontSize="Medium"
+                IsEnabled="True"
+                Clicked="RegistrarDispositivo_Clicked"/>
+
+            <Button 
+                x:Name="ConectarDispositivo" 
+                Text="Conectar dispositivo al hub"
+                TextColor="White"
+                BackgroundColor="Blue"
+                FontSize="Medium"
+                IsEnabled="False"
+                Clicked="ConectarDispositivo_Clicked"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Bateria" Grid.Column="0" Grid.Row="0" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Status" Grid.Column="0" Grid.Row="1" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Fuente" Grid.Column="0" Grid.Row="2" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Latitud" Grid.Column="0" Grid.Row="3" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Longitud" Grid.Column="0" Grid.Row="4" TextColor="Black" FontSize="Medium"/>
+
+                <Label x:Name="Bateria" Grid.Column="1" Grid.Row="0" TextColor="Black" FontSize="Medium"/>
+                <Label x:Name="Status" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="Medium"/>
+                <Label x:Name="Fuente" Grid.Column="1" Grid.Row="2" TextColor="Black" FontSize="Medium"/>
+                <Label x:Name="Latitud" Grid.Column="1" Grid.Row="3" TextColor="Black" FontSize="Medium"/>
+                <Label x:Name="Longitud" Grid.Column="1" Grid.Row="4" TextColor="Black" FontSize="Medium"/>
+
+            </Grid>
+
+            <Button 
+                x:Name="EnviarTelemetria" 
+                Text="Enviar telemetría"
+                TextColor="White"
+                BackgroundColor="Blue"
+                FontSize="Medium"
+                IsEnabled="False"
+                Clicked="EnviarTelemetria_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

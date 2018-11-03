@@ -13,7 +13,7 @@ namespace DemoIoTHub
 		{
 			InitializeComponent();
 
-			MainPage = new DemoIoTHub.MainPage();
+			MainPage = new DemoIoTHub.Paginas.PaginaTelemetria();
 		}
 
 		protected override void OnStart ()
